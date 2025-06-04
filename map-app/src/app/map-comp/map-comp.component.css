@@ -16,10 +16,9 @@
 .info-panel {
     padding: 15px;
     background: black;
-    color: lavenderblush;
+    color: #efd5ef;
     font-size: 15px;
     margin: 10px;
-    opacity: 0.87;
 }
 
 .info-panel p {
@@ -27,9 +26,9 @@
 }
 
 svg path {
- cursor: pointer;
+    cursor: pointer;
 }
 
 svg path:hover {
- fill: plum;
+    fill: plum;
 }
