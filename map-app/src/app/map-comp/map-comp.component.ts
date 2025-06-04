@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CountryService } from '../services/country.service';
 
 @Component({
   selector: 'app-map-comp',
@@ -9,20 +10,35 @@ import { Component } from '@angular/core';
 export class MapCompComponent {
 
   selectedCountryData: any = {
-    name: 'Australia',
-    capitalCity: 'Canberra',
-    region: 'East Asia & Pacific',
-    incomeLevel: 'High income',
-    longitude: '149.129',
-    latitude: '-35.282'
+    name: '',
+    capitalCity: '',
+    region: '',
+    incomeLevel: '',
+    longitude: '',
+    latitude: ''
   };
+
+  constructor(private countryService: CountryService) { }
+
   handleClick(event: any) {
     const clicked = event.target;
     if (clicked.tagName === 'path') {
-      const id = clicked.id;
-      const name = clicked.getAttribute('name');
-      console.log('Clicked:', id, name);
+      const code = clicked.id;
+      this.getCountryDetails(code);
     }
   }
 
+  getCountryDetails(code: string) {
+    this.countryService.fetchCountry(code).subscribe(response => {
+      const info = response[1][0];
+      this.selectedCountryData = {
+        name: info.name,
+        capitalCity: info.capitalCity,
+        region: info.region.value,
+        incomeLevel: info.incomeLevel.value,
+        longitude: info.longitude,
+        latitude: info.latitude
+      };
+    });
+  }
 }
