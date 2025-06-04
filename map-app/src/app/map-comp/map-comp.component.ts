@@ -8,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class MapCompComponent {
 
+  selectedCountryData: any = {
+    name: 'Australia',
+    capitalCity: 'Canberra',
+    region: 'East Asia & Pacific',
+    incomeLevel: 'High income',
+    longitude: '149.129',
+    latitude: '-35.282'
+  };
+
 }
