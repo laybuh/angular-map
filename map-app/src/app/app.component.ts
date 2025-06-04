@@ -5,7 +5,7 @@ import { MapCompComponent } from './map-comp/map-comp.component';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterOutlet, MapCompComponent],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
