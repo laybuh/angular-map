@@ -1,12 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
+.map-container {
+    display: flex;
+    gap: 20px;
+}
+
+.map-col {
+    flex: 2;
+}
+
+.info-col {
+    flex: 1;
+}
+
 .info-panel {
-  padding: 15px;
-  background: black;
-  color: lavenderblush;
-  font-size: 15px;
-  margin: 10px;
-  opacity: 0.87;
+    padding: 15px;
+    background: black;
+    color: lavenderblush;
+    font-size: 15px;
+    margin: 10px;
+    opacity: 0.87;
 }
 
 .info-panel p {
-  margin: 10px;
+    margin: 10px;
 }
