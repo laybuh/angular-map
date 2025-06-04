@@ -25,3 +25,11 @@
 .info-panel p {
     margin: 10px;
 }
+
+svg path {
+ cursor: pointer;
+}
+
+svg path:hover {
+ fill: plum;
+}
